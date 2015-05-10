@@ -11,7 +11,7 @@ data_subset$Datetime <- as.POSIXct(datetime)
 ## Plotting graphs and composition of graphics matrix
 
 png("plot4.png", width=480, height=480)
-## As oppposed to plot 3, copy.dev() does not produce satisfactory result with regard to the legend in this context; using png() solves the distortion problem)
+## As opposed to in plot 3, copy.dev() does not produce satisfactory result with regard to the legend in this context; using png() seems to solve the distortion problem.
 par(mfrow = c(2, 2))
 ## Creates a 2x2 graphic matrix
 
