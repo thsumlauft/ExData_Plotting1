@@ -1,9 +1,9 @@
 ## Loading the full dataset and subsetting the required two days
 
 library(dplyr)
+## loads dplyr
 
 ## Loading the full data set
-
 
 data <- read.table("household_power_consumption.txt",
                    header = TRUE,
