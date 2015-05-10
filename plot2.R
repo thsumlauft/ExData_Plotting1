@@ -1,10 +1,15 @@
-## Creating Plot 1
+## Creating Plot 2
 
 source("./GitHub/ExData_Plotting1/Reading_Data.R")
 
-hist(data_subset$Global_active_power, main="Global Active Power", 
-     xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+## Converting dates and time into POSIXct
+datetime <- paste(as.Date(data_subset$Date), data_subset$Time)
+data_subset$Datetime <- as.POSIXct(datetime)
 
-## Saving to file
-dev.copy(png, file="plot1.png", height=480, width=480)
+## Plotting data
+plot(data_subset$Global_active_power~data_subset$Datetime, type="l",
+     ylab="Global Active Power (kilowatts)", xlab="")
+
+## Saving graph as png
+dev.copy(png, file="plot2.png", height=480, width=480)
 dev.off()
