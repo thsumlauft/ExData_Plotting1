@@ -30,7 +30,4 @@ legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=
 plot(data_subset$Datetime, data_subset$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
 ## creates lower right graphic
 
-
-## Saving graph as png
-
 dev.off()
