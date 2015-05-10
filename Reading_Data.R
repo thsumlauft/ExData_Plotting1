@@ -19,5 +19,6 @@ dim(data)
 data$Date <- as.Date(data$Date, format="%d/%m/%Y")
 ## converts the date column into date format
 data_subset <- filter(data,Date >= "2007-02-01",Date <= "2007-02-02")
-dim(data_subset)
 ## creates a subset with the two required days
+dim(data_subset)
+## displays the number of observations and variables
