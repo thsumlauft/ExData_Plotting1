@@ -1,5 +1,7 @@
 ## Loading the full dataset and subsetting the required two days
 
+library(dplyr)
+
 ## Loading the full data set
 
 
@@ -8,7 +10,9 @@ data <- read.table("household_power_consumption.txt",
                    sep = ";",
                    colClasses = c("character","character","numeric","numeric","numeric","numeric","numeric","numeric","numeric"),
                    na = "?")
-dim(data)        			   
+## Reads the data from the file
+dim(data)                
+## Displays a summary of the variables
 
 ## Subsetting the required dates 1/2/2007 and 2/2/2007
 
